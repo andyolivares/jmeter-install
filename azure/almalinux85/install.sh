@@ -7,4 +7,6 @@ tar xvf apache-jmeter.tgz
 rm apache-jmeter.tgz
 
 chmod +x ./apache-jmeter-5.4.3/bin/jmeter-server
-nohup ./apache-jmeter-5.4.3/bin/jmeter-server -Jserver.rmi.ssl.disable=true -Jserver.rmi.localport=8000 > jmeter.log &
+cp -a ./lib/jmeter-plugins-cmn-jmeter-0.4.jar ./apache-jmeter-5.4.3/lib
+cp -a ./lib/perfmon-2.2.2.jar ./apache-jmeter-5.4.3/lib
+cp -a ./lib/ext/jmeter-plugins-perfmon-2.1.jar ./apache-jmeter-5.4.3/lib/ext
